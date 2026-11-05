@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>糖心vigo-糖心vigo官网入口_糖心vigo使用指南与版本更新</title>
+<meta name="description" content="糖心vigo主题首页：了解糖心vigo的基本定位、主要功能分区、使用路径与版本更新说明，并查看常见问题与下载入口提示。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23ff7a9c'/%3E%3Cstop offset='1' stop-color='%23ffb36b'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='16' fill='url(%23g)'/%3E%3Cpath d='M32 46c-9-6-14-11-14-17a7 7 0 0 1 14-2 7 7 0 0 1 14 2c0 6-5 11-14 17z' fill='%23fff'/%3E%3C/svg%3E">
+<style>
+:root{
+  --pink:#ff6f91;
+  --pink-soft:#ffe3ea;
+  --orange:#ffb36b;
+  --ink:#2a2230;
+  --ink-2:#5d5266;
+  --line:#f0e2e8;
+  --bg:#fffafb;
+  --card:#ffffff;
+  --radius:18px;
+  --shadow:0 10px 30px rgba(190,110,140,.10);
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,-apple-system,"Segoe UI",sans-serif;
+  color:var(--ink);
+  background:var(--bg);
+  line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:inherit;text-decoration:none;}
+img,svg{display:block;max-width:100%;}
+.wrap{width:min(1140px,92vw);margin:0 auto;}
+
+/* header */
+header.site{
+  position:sticky;top:0;z-index:50;
+  background:rgba(255,250,251,.92);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--line);
+}
+.nav-inner{display:flex;align-items:center;gap:22px;height:68px;}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:19px;letter-spacing:.3px;}
+.logo .mark{
+  width:34px;height:34px;border-radius:11px;
+  background:linear-gradient(135deg,var(--pink),var(--orange));
+  display:grid;place-items:center;box-shadow:0 6px 14px rgba(255,111,145,.35);
+}
+.logo .mark svg{width:19px;height:19px;}
+nav.main{margin-left:auto;display:flex;gap:6px;flex-wrap:wrap;}
+nav.main a{
+  padding:7px 13px;border-radius:999px;font-size:14.5px;color:var(--ink-2);
+  transition:.2s;
+}
+nav.main a:hover{background:var(--pink-soft);color:var(--pink);}
+.nav-cta{
+  padding:8px 18px;border-radius:999px;background:var(--pink);color:#fff;font-size:14.5px;font-weight:600;
+  box-shadow:0 6px 16px rgba(255,111,145,.35);transition:.2s;
+}
+.nav-cta:hover{background:#f4577d;}
+
+/* hero */
+.hero{
+  padding:64px 0 54px;
+  background:
+    radial-gradient(680px 320px at 88% 0%,#ffeaf0 0%,transparent 70%),
+    radial-gradient(520px 300px at 5% 90%,#fff2e2 0%,transparent 70%);
+  border-bottom:1px solid var(--line);
+}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center;}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:13px;color:var(--pink);font-weight:600;
+  background:#fff;border:1px solid var(--pink-soft);
+  padding:5px 14px;border-radius:999px;margin-bottom:18px;
+}
+.eyebrow i{width:6px;height:6px;border-radius:50%;background:var(--pink);display:block;}
+h1{
+  font-size:clamp(30px,4.4vw,46px);
+  line-height:1.25;margin:0 0 18px;font-weight:800;letter-spacing:.5px;
+}
+h1 .hl{
+  background:linear-gradient(180deg,transparent 62%,#ffd9e3 62%);
+  padding:0 4px;
+}
+.hero p.lead{font-size:16.5px;color:var(--ink-2);margin:0 0 26px;max-width:34em;}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;align-items:center;}
+.btn{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:12px 26px;border-radius:999px;font-weight:700;font-size:15px;
+  transition:.2s;border:1px solid transparent;
+}
+.btn-primary{background:var(--pink);color:#fff;box-shadow:0 10px 24px rgba(255,111,145,.35);}
+.btn-primary:hover{background:#f4577d;transform:translateY(-1px);}
+.btn-ghost{background:#fff;border-color:var(--line);color:var(--ink);}
+.btn-ghost:hover{border-color:var(--pink);color:var(--pink);}
+.btn[aria-disabled="true"]{
+  background:#f7eef1;color:#a08d97;cursor:not-allowed;
+  box-shadow:none;pointer-events:none;
+}
+.hero-meta{display:flex;gap:26px;margin-top:30px;flex-wrap:wrap;}
+.hero-meta div{font-size:13.5px;color:var(--ink-2);}
+.hero-meta b{display:block;font-size:21px;color:var(--ink);font-weight:800;line-height:1.3;}
+
+.hero-art{
+  background:linear-gradient(150deg,#fff 0%,#fff4f7 100%);
+  border:1px solid var(--line);border-radius:26px;
+  padding:26px;box-shadow:var(--shadow);
+}
+.hero-art .bar{display:flex;gap:7px;margin-bottom:20px;}
+.hero-art .bar span{width:10px;height:10px;border-radius:50%;background:#ffd4de;}
+.hero-art .bar span:nth-child(2){background:#ffe3c7;}
+.hero-art .bar span:nth-child(3){background:#e7f0dc;}
+
+/* section base */
+section{padding:64px 0;}
+.sec-head{max-width:640px;margin-bottom:36px;}
+.sec-head h2{font-size:clamp(22px,2.6vw,29px);margin:0 0 12px;font-weight:800;letter-spacing:.3px;}
+.sec-head p{margin:0;color:var(--ink-2);font-size:15.5px;}
+.tag{
+  display:inline-block;font-size:12.5px;font-weight:700;color:var(--pink);
+  letter-spacing:1px;margin-bottom:10px;
+}
+
+/* feature cards */
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+.card{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  padding:26px 24px;box-shadow:0 4px 14px rgba(190,110,140,.05);
+  transition:.25s;
+}
+.card:hover{transform:translateY(-3px);box-shadow:var(--shadow);border-color:#ffd7e2;}
+.card .ico{
+  width:44px;height:44px;border-radius:13px;display:grid;place-items:center;
+  background:var(--pink-soft);margin-bottom:16px;
+}
+.card .ico svg{width:22px;height:22px;stroke:var(--pink);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;}
+.card h3{margin:0 0 8px;font-size:17px;font-weight:800;}
+.card p{margin:0;font-size:14.5px;color:var(--ink-2);}
+
+/* steps */
+.steps-wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:48px;align-items:start;}
+.steps{list-style:none;margin:0;padding:0;counter-reset:s;}
+.steps li{
+  position:relative;padding:0 0 26px 60px;counter-increment:s;
+}
+.steps li::before{
+  content:counter(s);
+  position:absolute;left:0;top:0;
+  width:40px;height:40px;border-radius:50%;
+  display:grid;place-items:center;
+  background:#fff;border:1px solid var(--line);
+  color:var(--pink);font-weight:800;font-size:15px;
+  box-shadow:0 4px 12px rgba(190,110,140,.08);
+}
+.steps li::after{
+  content:"";position:absolute;left:19px;top:44px;bottom:6px;width:1px;
+  background:linear-gradient(#ffe0e8,transparent);
+}
+.steps li:last-child::after{display:none;}
+.steps h3{margin:0 0 6px;font-size:16.5px;font-weight:800;}
+.steps p{margin:0;font-size:14.5px;color:var(--ink-2);}
+
+.panel{
+  background:linear-gradient(160deg,#fff,#fff6f8);
+  border:1px solid var(--line);border-radius:22px;padding:30px;
+  box-shadow:var(--shadow);
+}
+.panel h3{margin:0 0 6px;font-size:18px;font-weight:800;}
+.panel .sub{font-size:13.5px;color:var(--ink-2);margin:0 0 20px;}
+.checklist{list-style:none;margin:0;padding:0;display:grid;gap:13px;}
+.checklist li{display:flex;gap:10px;font-size:14.5px;color:var(--ink-2);}
+.checklist li svg{flex:0 0 18px;width:18px;height:18px;margin-top:4px;stroke:var(--pink);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
+
+/* notes / faq */
+.split{display:grid;grid-template-columns:1.05fr .95fr;gap:44px;align-items:start;}
+.note-list{display:grid;gap:16px;margin:0;padding:0;list-style:none;}
+.note-list li{
+  background:#fff;border:1px solid var(--line);border-radius:14px;padding:18px 20px;
+}
+.note-list h3{margin:0 0 5px;font-size:15.5px;font-weight:800;}
+.note-list p{margin:0;font-size:14px;color:var(--ink-2);}
+
+.faq{display:grid;gap:12px;}
+details{
+  background:#fff;border:1px solid var(--line);border-radius:14px;
+  padding:16px 20px;transition:.2s;
+}
+details[open]{border-color:#ffd7e2;box-shadow:0 6px 18px rgba(190,110,140,.07);}
+summary{
+  cursor:pointer;font-weight:700;font-size:15px;list-style:none;
+  display:flex;justify-content:space-between;align-items:center;gap:12px;
+}
+summary::-webkit-details-marker{display:none;}
+summary::after{content:"+";color:var(--pink);font-size:19px;font-weight:700;line-height:1;}
+details[open] summary::after{content:"−";}
+details p{margin:12px 0 0;font-size:14.5px;color:var(--ink-2);}
+
+/* download band */
+.band{
+  background:linear-gradient(120deg,#ff7a9c,#ffb36b);
+  border-radius:26px;padding:44px;color:#fff;
+  display:flex;align-items:center;justify-content:space-between;gap:30px;flex-wrap:wrap;
+  box-shadow:0 18px 40px rgba(255,140,160,.28);
+}
+.band h2{margin:0 0 8px;font-size:clamp(21px,2.4vw,27px);font-weight:800;}
+.band p{margin:0;font-size:14.5px;opacity:.94;max-width:36em;}
+.band .btn[aria-disabled="true"]{
+  background:rgba(255,255,255,.9);color:#c07a8d;
+}
+
+/* footer */
+footer.site{
+  border-top:1px solid var(--line);padding:44px 0 34px;background:#fff;
+}
+.foot-grid{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap;}
+.foot-brand{max-width:340px;}
+.foot-brand .logo{margin-bottom:12px;}
+.foot-brand p{font-size:13.5px;color:var(--ink-2);margin:0;}
+.foot-links{display:flex;gap:52px;flex-wrap:wrap;}
+.foot-links h4{margin:0 0 12px;font-size:14px;font-weight:800;}
+.foot-links ul{list-style:none;margin:0;padding:0;display:grid;gap:8px;}
+.foot-links a{font-size:13.8px;color:var(--ink-2);}
+.foot-links a:hover{color:var(--pink);}
+.copy{
+  margin-top:32px;padding-top:18px;border-top:1px solid var(--line);
+  font-size:12.8px;color:#9b8e97;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;
+}
+
+@media (max-width:900px){
+  .hero-grid,.steps-wrap,.split{grid-template-columns:1fr;gap:34px;}
+  .cards{grid-template-columns:1fr 1fr;}
+}
+@media (max-width:640px){
+  .nav-inner{height:auto;padding:12px 0;flex-wrap:wrap;gap:10px;}
+  nav.main{margin-left:0;order:3;width:100%;overflow-x:auto;flex-wrap:nowrap;padding-bottom:2px;}
+  nav.main a{white-space:nowrap;font-size:13.5px;}
+  .nav-cta{margin-left:auto;}
+  .hero{padding:40px 0 38px;}
+  .hero p.lead{font-size:15.5px;}
+  .hero-meta{gap:18px;}
+  section{padding:44px 0;}
+  .cards{grid-template-columns:1fr;}
+  .band{padding:30px 24px;}
+  .panel{padding:24px;}
+  .foot-links{gap:34px;}
+}
+</style>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap nav-inner">
+    <a class="logo" href="#top">
+      <span class="mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M12 20c-5-3.4-8-6.4-8-9.8A4 4 0 0 1 12 7a4 4 0 0 1 8 3.2c0 3.4-3 6.4-8 9.8z" fill="#fff"/></svg>
+      </span>
+      糖心vigo
+    </a>
+    <nav class="main" aria-label="主导航">
+      <a href="#intro">主题介绍</a>
+      <a href="#features">功能分区</a>
+      <a href="#guide">使用路径</a>
+      <a href="#notes">使用说明</a>
+      <a href="#faq">常见问题</a>
+    </nav>
+    <a class="nav-cta" href="#download">获取入口</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow"><i></i>主题首页 · 使用与更新说明</span>
+        <h1><span class="hl">糖心vigo</span></h1>
+        <p class="lead">糖心vigo 是一个以内容浏览与日常使用为核心的页面主题。本页把它的定位、主要分区、使用步骤与常见问题集中在一处，方便第一次接触糖心vigo 的访问者快速了解整体结构，再决定从哪个入口继续。</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#guide">查看使用路径</a>
+          <a class="btn btn-ghost" href="#download">获取入口</a>
+        </div>
+        <div class="hero-meta">
+          <div><b>5</b>功能分区</div>
+          <div><b>4</b>使用步骤</div>
+          <div><b>6</b>常见问题</div>
+        </div>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="bar"><span></span><span></span><span></span></div>
+        <svg viewBox="0 0 320 220" role="img" aria-label="糖心vigo 主题插画">
+          <defs>
+            <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#ff8fab"/><stop offset="1" stop-color="#ffb36b"/>
+            </linearGradient>
+            <linearGradient id="g2" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#fff0f4"/><stop offset="1" stop-color="#ffe0e8"/>
+            </linearGradient>
+          </defs>
+          <rect x="0" y="0" width="320" height="220" rx="18" fill="url(#g2)"/>
+          <rect x="22" y="26" width="150" height="12" rx="6" fill="#fff"/>
+          <rect x="22" y="50" width="104" height="10" rx="5" fill="#ffd3de"/>
+          <rect x="22" y="80" width="128" height="86" rx="14" fill="url(#g1)" opacity=".92"/>
+          <path d="M86 126c-13-9-20-16-20-24a10 10 0 0 1 20-3 10 10 0 0 1 20 3c0 8-7 15-20 24z" fill="#fff" opacity=".92"/>
+          <rect x="164" y="80" width="134" height="40" rx="12" fill="#fff"/>
+          <rect x="176" y="94" width="72" height="10" rx="5" fill="#ffd3de"/>
+          <rect x="164" y="130" width="134" height="36" rx="12" fill="#fff"/>
+          <rect x="176" y="143" width="56" height="10" rx="5" fill="#ffe3c7"/>
+          <rect x="22" y="180" width="276" height="12" rx="6" fill="#fff" opacity=".75"/>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <section id="intro">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="tag">主题介绍</span>
+        <h2>糖心vigo 是什么，适合谁看</h2>
+        <p>糖心vigo 面向希望先弄清整体结构、再动手使用的访问者。它把分散的内容整理成几个清晰分区，让浏览有顺序，体验更完整。</p>
+      </div>
+      <div class="cards">
+        <article class="card">
+          <div class="ico"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg></div>
+          <h3>先浏览再深入</h3>
+          <p>首页承担目录作用，把糖心vigo 的主要栏目一次呈现，减少来回查找，适合初次访问时建立整体印象。</p>
+        </article>
+        <article class="card">
+          <div class="ico"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="3"/><path d="M3 9h18M8 14h8"/></svg></div>
+          <h3>分区简单清楚</h3>
+          <p>糖心vigo 的页面按内容与操作分成不同区块，每块只回答一个问题，阅读时不容易被无关信息打断。</p>
+        </article>
+        <article class="card">
+          <div class="ico"><svg viewBox="0 0 24 24"><path d="M12 3v4M12 17v4M3 12h4M17 12h4"/><circle cx="12" cy="12" r="4"/></svg></div>
+          <h3>持续补充说明</h3>
+          <p>使用中遇到的问题会整理进常见问题区，糖心vigo 的说明随页面一起更新，方便随时回看。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="features" style="background:#fff;">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="tag">功能分区</span>
+        <h2>页面由哪些部分组成</h2>
+        <p>下面几块是糖心vigo 页面的主要内容单元，各自承担不同任务，组合起来构成一次完整的浏览过程。</p>
+      </div>
+      <div class="cards">
+        <article class="card">
+          <div class="ico"><svg viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h10"/></svg></div>
+          <h3>导航与入口</h3>
+          <p>顶部导航指向页面内的实际区块，点击即可跳转到对应内容，不需要额外寻找。</p>
+        </article>
+        <article class="card">
+          <div class="ico"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="M7 10h6M7 14h10"/></svg></div>
+          <h3>主题首屏</h3>
+          <p>首屏用一段说明交代糖心vigo 的定位，并给出两个主要入口：查看使用路径与获取入口。</p>
+        </article>
+        <article class="card">
+          <div class="ico"><svg viewBox="0 0 24 24"><path d="M12 3l2.5 5.5L20 9.5l-4 4 1 6-5-2.8L7 19.5l1-6-4-4 5.5-1z"/></svg></div>
+          <h3>内容卡片</h3>
+          <p>卡片把每项内容压缩成标题加短说明，方便快速扫读，再决定是否继续阅读细节。</p>
+        </article>
+        <article class="card">
+          <div class="ico"><svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"/></svg></div>
+          <h3>使用路径</h3>
+          <p>以步骤形式串联操作顺序，说明在糖心vigo 中从进入到完成一次浏览的常见路线。</p>
+        </article>
+        <article class="card">
+          <div class="ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16h.01"/></svg></div>
+          <h3>说明与问题</h3>
+          <p>使用说明区列出需要注意的细节，常见问题区用折叠问答处理高频疑问。</p>
+        </article>
+        <article class="card">
+          <div class="ico"><svg viewBox="0 0 24 24"><path d="M12 3v12M7 10l5 5 5-5M4 20h16"/></svg></div>
+          <h3>下载入口</h3>
+          <p>下载入口统一放在页面下部，当前按钮为禁用状态，待正式地址确定后替换。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="guide">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="tag">使用路径</span>
+        <h2>从打开到熟悉，四步完成</h2>
+        <p>第一次访问糖心vigo 时，按下面的顺序走一遍，基本可以把页面结构和入口位置弄清楚。</p>
+      </div>
+      <div class="steps-wrap">
+        <ol class="steps">
+          <li>
+            <h3>阅读首屏说明</h3>
+            <p>先看首屏那段话，确认糖心vigo 的主题范围与页面定位，判断是否与自己的需求一致。</p>
+          </li>
+          <li>
+            <h3>用导航定位区块</h3>
+            <p>顶部导航列出全部主要区块，点击任意一项即可跳到对应位置，适合已有明确目标时使用。</p>
+          </li>
+          <li>
+            <h3>按卡片扫读内容</h3>
+            <p>功能分区与说明区以卡片组织，先读标题和短句，遇到关心的内容再往下细看。</p>
+          </li>
+          <li>
+            <h3>查看问题与入口</h3>
+            <p>最后浏览常见问题，确认没有遗漏，再根据页面提示选择下一步入口。</p>
+          </li>
+        </ol>
+        <aside class="panel">
+          <h3>浏览前的几点准备</h3>
+          <p class="sub">这些条件不复杂，但能让第一次使用更顺畅。</p>
+          <ul class="checklist">
+            <li><svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"/></svg><span>使用较新版本的常见浏览器，页面布局显示更完整。</span></li>
+            <li><svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"/></svg><span>手机访问时优先阅读首屏文字，装饰插画可以忽略。</span></li>
+            <li><svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"/></svg><span>遇到跳转异常，先确认点击的是页面内锚点链接。</span></li>
+            <li><svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"/></svg><span>下载入口处于禁用状态时，说明地址尚未替换，属正常现象。</span></li>
+            <li><svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 7"/></svg><span>阅读顺序建议自上而下，避免跳过说明直接操作。</span></li>
+          </ul>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <section id="notes" style="background:#fff;">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="tag">使用说明</span>
+        <h2>阅读糖心vigo 时值得留意的地方</h2>
+        <p>以下几条是页面在表达上的约定，理解之后再看内容，判断会更准确。</p>
+      </div>
+      <div class="split">
+        <ul class="note-list">
+          <li>
+            <h3>说明与功能分开写</h3>
+            <p>页面中的描述性文字用于解释结构与用途，不承诺具体效果；涉及操作的内容单独放在使用路径区。</p>
+          </li>
+          <li>
+            <h3>入口状态如实标注</h3>
+            <p>尚未替换正式地址的下载按钮会显示为不可点击，避免访问者误以为可以立即获取。</p>
+          </li>
+          <li>
+            <h3>内容按层级递进</h3>
+            <p>从主题介绍到功能分区，再到使用路径与问题，信息由概括走向具体，建议按顺序阅读。</p>
+          </li>
+          <li>
+            <h3>移动端优先文字</h3>
+            <p>小屏设备上，糖心vigo 的插画与装饰会退到次要位置，标题和正文保持完整可读。</p>
+          </li>
+        </ul>
+        <div class="panel" style="background:linear-gradient(160deg,#fff,#fff4f7);">
+          <h3>一句话概括</h3>
+          <p class="sub">给赶时间的访问者。</p>
+          <p style="font-size:15px;color:var(--ink-2);margin:0 0 18px;">糖心vigo 把主题介绍、功能分区、使用路径和常见问题放在同一个首页里，从上往下读一遍，就能知道它包含什么、怎么用、遇到问题去哪里找答案。</p>
+          <a class="btn btn-ghost" href="#faq">直接看常见问题</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="tag">常见问题</span>
+        <h2>访问糖心vigo 时的常见疑问</h2>
+        <p>下面整理了初次访问最容易遇到的几个问题，点击标题即可展开查看。</p>
+      </div>
+      <div class="faq">
+        <details open>
+          <summary>糖心vigo 首页主要提供什么内容？</summary>
+          <p>首页集中呈现主题介绍、功能分区、使用路径、使用说明与常见问题五个部分，目的是让访问者在一页之内了解糖心vigo 的结构和使用方式。</p>
+        </details>
+        <details>
+          <summary>导航里的链接会跳到别的页面吗？</summary>
+          <p>不会。顶部导航指向本页已有的区块，点击后在当前页面内滚动到对应位置，方便快速定位。</p>
+        </details>
+        <details>
+          <summary>为什么下载按钮点了没有反应？</summary>
+          <p>该按钮目前用于占位，正式地址尚未替换，因此显示为禁用状态。后续更新地址后即可正常使用。</p>
+        </details>
+        <details>
+          <summary>手机上阅读体验如何？</summary>
+          <p>页面针对小屏做了适配：导航可横向滑动，卡片改为单列排列，标题字号和行距按移动端阅读习惯调整，首屏优先展示文字内容。</p>
+        </details>
+        <details>
+          <summary>内容会更新吗？</summary>
+          <p>说明类内容会随使用情况补充，新增的问题会整理进常见问题区，已有的条目保持原有表述范围。</p>
+        </details>
+        <details>
+          <summary>第一次访问应该从哪看起？</summary>
+          <p>建议从首屏说明开始，再依次看功能分区和使用路径。如果只关心具体疑问，可以直接跳到常见问题区。</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section id="download" style="padding-top:0;">
+    <div class="wrap">
+      <div class="band">
+        <div>
+          <h2>获取糖心vigo 的下载入口</h2>
+          <p>下载按钮当前为占位状态，正式地址确定后会替换为可用链接。在此之前，可以先浏览页面内的使用路径与常见问题。</p>
+        </div>
+        <a class="btn" href="#" data-download-placeholder="true" aria-disabled="true" tabindex="-1">下载</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a class="logo" href="#top">
+          <span class="mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M12 20c-5-3.4-8-6.4-8-9.8A4 4 0 0 1 12 7a4 4 0 0 1 8 3.2c0 3.4-3 6.4-8 9.8z" fill="#fff"/></svg>
+          </span>
+          糖心vigo
+        </a>
+        <p>糖心vigo 主题首页，整理主题介绍、功能分区、使用路径与常见问题，方便访问者一页之内完成了解。</p>
+      </div>
+      <div class="foot-links">
+        <div>
+          <h4>页面内容</h4>
+          <ul>
+            <li><a href="#intro">主题介绍</a></li>
+            <li><a href="#features">功能分区</a></li>
+            <li><a href="#guide">使用路径</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>参考</h4>
+          <ul>
+            <li><a href="#notes">使用说明</a></li>
+            <li><a href="#faq">常见问题</a></li>
+            <li><a href="#download">下载入口</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="copy">
+      <span>© 2024 糖心vigo 主题首页 · 内容以页面说明为准</span>
+      <span>糖心vigo · 页面结构说明</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
