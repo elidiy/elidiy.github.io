@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>糖心社区-糖心社区官网入口_糖心社区注册_糖心社区怎么进</title>
+<meta name="description" content="糖心社区首页导航：了解糖心社区是什么、糖心社区官网入口与注册流程、板块内容与社区规则，帮助你快速找到糖心社区的正确进入方式与使用说明。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23f0567a'/%3E%3Cpath d='M32 48s-14-9.2-14-19a9 9 0 0 1 16-5.6A9 9 0 0 1 50 29c0 9.8-14 19-14 19z' fill='%23fff'/%3E%3C/svg%3E">
+<style>
+  :root{
+    --pink:#f0567a;
+    --pink-deep:#d63c62;
+    --pink-soft:#fde8ee;
+    --ink:#2b2229;
+    --ink-2:#5c5058;
+    --line:#f0dfe5;
+    --bg:#fffafb;
+    --card:#ffffff;
+    --radius:16px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,-apple-system,sans-serif;
+    color:var(--ink);
+    background:var(--bg);
+    line-height:1.75;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit;text-decoration:none}
+  img,svg{display:block;max-width:100%}
+  .wrap{width:100%;max-width:1120px;margin:0 auto;padding:0 20px}
+
+  /* header */
+  header{
+    position:sticky;top:0;z-index:50;
+    background:rgba(255,250,251,.92);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav{
+    display:flex;align-items:center;justify-content:space-between;
+    gap:16px;padding:12px 0;flex-wrap:wrap;
+  }
+  .brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:19px;letter-spacing:.5px}
+  .brand-mark{
+    width:38px;height:38px;border-radius:12px;
+    background:linear-gradient(140deg,#f0567a,#ff8fa6);
+    display:grid;place-items:center;flex:0 0 auto;
+    box-shadow:0 6px 16px rgba(240,86,122,.28);
+  }
+  .brand-mark svg{width:20px;height:20px}
+  nav ul{display:flex;gap:6px;list-style:none;flex-wrap:wrap}
+  nav a{
+    display:inline-block;padding:7px 12px;border-radius:999px;
+    font-size:14.5px;color:var(--ink-2);transition:.2s;
+  }
+  nav a:hover{background:var(--pink-soft);color:var(--pink-deep)}
+
+  /* hero */
+  .hero{
+    position:relative;overflow:hidden;
+    background:linear-gradient(170deg,#fff2f6 0%,#fffafb 70%);
+    border-bottom:1px solid var(--line);
+  }
+  .hero-inner{
+    display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:center;
+    padding:56px 0 60px;
+  }
+  .eyebrow{
+    display:inline-flex;align-items:center;gap:7px;
+    font-size:13px;font-weight:600;color:var(--pink-deep);
+    background:#fff;border:1px solid var(--line);
+    padding:5px 13px;border-radius:999px;margin-bottom:18px;
+  }
+  .eyebrow i{width:7px;height:7px;border-radius:50%;background:var(--pink);display:block}
+  h1{
+    font-size:clamp(30px,4.4vw,46px);
+    line-height:1.22;font-weight:800;letter-spacing:1px;
+    margin-bottom:16px;
+  }
+  h1 em{
+    font-style:normal;
+    background:linear-gradient(100deg,var(--pink),#ff9a6b);
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+  }
+  .lead{font-size:16.5px;color:var(--ink-2);max-width:33em;margin-bottom:26px}
+  .actions{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+  .btn{
+    display:inline-flex;align-items:center;gap:8px;
+    padding:12px 24px;border-radius:999px;font-size:15px;font-weight:600;
+    transition:.22s;border:1px solid transparent;
+  }
+  .btn-primary{
+    background:linear-gradient(130deg,var(--pink),#ff7f9d);
+    color:#fff;box-shadow:0 10px 24px rgba(240,86,122,.3);
+  }
+  .btn-primary:hover{transform:translateY(-2px);box-shadow:0 14px 28px rgba(240,86,122,.38)}
+  .btn-ghost{
+    background:#fff;border-color:var(--line);color:var(--ink-2);
+    pointer-events:none;opacity:.72;
+  }
+  .hero-note{font-size:13px;color:#9a8b93;margin-top:16px}
+  .hero-figure{
+    background:#fff;border:1px solid var(--line);border-radius:24px;
+    padding:22px;box-shadow:0 20px 44px rgba(214,60,98,.08);
+  }
+  .hero-figure h2{font-size:15px;font-weight:700;margin-bottom:14px;color:var(--ink)}
+  .mini-list{list-style:none;display:grid;gap:10px}
+  .mini-list li{
+    display:flex;gap:10px;align-items:flex-start;
+    font-size:14px;color:var(--ink-2);
+    background:var(--pink-soft);border-radius:12px;padding:10px 12px;
+  }
+  .mini-list b{color:var(--pink-deep);font-weight:700;flex:0 0 auto}
+
+  /* section base */
+  section{padding:58px 0}
+  .sec-head{margin-bottom:30px;max-width:44em}
+  .sec-tag{font-size:13px;font-weight:700;color:var(--pink);letter-spacing:2px;text-transform:uppercase}
+  .sec-head h2{font-size:clamp(22px,2.8vw,28px);font-weight:800;margin:8px 0 10px;letter-spacing:.5px}
+  .sec-head p{color:var(--ink-2);font-size:15.5px}
+
+  /* cards */
+  .grid{display:grid;gap:20px}
+  .grid-3{grid-template-columns:repeat(3,1fr)}
+  .grid-2{grid-template-columns:repeat(2,1fr)}
+  .card{
+    background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+    padding:24px;transition:.24s;
+  }
+  .card:hover{transform:translateY(-3px);box-shadow:0 16px 32px rgba(214,60,98,.09);border-color:#f6c7d4}
+  .card h3{font-size:17px;font-weight:700;margin-bottom:8px}
+  .card p{font-size:14.5px;color:var(--ink-2)}
+  .icon{
+    width:44px;height:44px;border-radius:13px;display:grid;place-items:center;
+    background:var(--pink-soft);margin-bottom:14px;
+  }
+  .icon svg{width:22px;height:22px;stroke:var(--pink-deep)}
+
+  /* steps */
+  .steps{counter-reset:step;display:grid;gap:0;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;background:#fff}
+  .step{
+    display:grid;grid-template-columns:64px 1fr;gap:18px;align-items:start;
+    padding:22px 24px;border-bottom:1px solid var(--line);
+  }
+  .step:last-child{border-bottom:none}
+  .step-no{
+    counter-increment:step;width:44px;height:44px;border-radius:50%;
+    background:var(--pink-soft);color:var(--pink-deep);
+    display:grid;place-items:center;font-weight:800;font-size:16px;
+  }
+  .step-no::before{content:"0" counter(step)}
+  .step h3{font-size:16.5px;font-weight:700;margin-bottom:4px}
+  .step p{font-size:14.5px;color:var(--ink-2)}
+
+  /* rules */
+  .rules{background:#fff6f8;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .rule-list{list-style:none;display:grid;gap:14px}
+  .rule-list li{
+    display:flex;gap:12px;align-items:flex-start;
+    background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px 18px;
+    font-size:14.5px;color:var(--ink-2);
+  }
+  .rule-list li svg{width:20px;height:20px;flex:0 0 auto;margin-top:3px;stroke:var(--pink)}
+  .rule-list li b{color:var(--ink)}
+
+  /* faq */
+  details{
+    background:#fff;border:1px solid var(--line);border-radius:12px;
+    padding:16px 20px;margin-bottom:12px;
+  }
+  details[open]{border-color:#f6c7d4;box-shadow:0 10px 24px rgba(214,60,98,.07)}
+  summary{
+    cursor:pointer;font-weight:700;font-size:15.5px;list-style:none;
+    display:flex;justify-content:space-between;gap:14px;align-items:center;
+  }
+  summary::-webkit-details-marker{display:none}
+  summary::after{content:"+";color:var(--pink);font-size:20px;font-weight:600;line-height:1}
+  details[open] summary::after{content:"–"}
+  details p{margin-top:10px;font-size:14.5px;color:var(--ink-2)}
+
+  /* footer */
+  footer{
+    background:#2b2229;color:#cbbfc6;padding:44px 0 30px;margin-top:10px;
+  }
+  .foot-top{display:flex;justify-content:space-between;gap:28px;flex-wrap:wrap;margin-bottom:26px}
+  .foot-brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:18px;color:#fff}
+  .foot-brand .brand-mark{box-shadow:none}
+  .foot-desc{font-size:13.5px;color:#a2929a;max-width:32em;margin-top:12px;line-height:1.8}
+  .foot-links{display:flex;gap:34px;flex-wrap:wrap}
+  .foot-links h4{font-size:13px;color:#fff;margin-bottom:10px;letter-spacing:1px}
+  .foot-links ul{list-style:none;display:grid;gap:7px}
+  .foot-links a{font-size:13.5px;color:#a2929a;transition:.2s}
+  .foot-links a:hover{color:var(--pink)}
+  .foot-bottom{
+    border-top:1px solid #3d323a;padding-top:18px;
+    font-size:12.5px;color:#8a7b83;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;
+  }
+
+  @media(max-width:880px){
+    .hero-inner{grid-template-columns:1fr;padding:40px 0 46px;gap:28px}
+    .grid-3{grid-template-columns:1fr 1fr}
+    section{padding:44px 0}
+  }
+  @media(max-width:620px){
+    .grid-3,.grid-2{grid-template-columns:1fr}
+    .nav{gap:10px}
+    nav ul{gap:2px}
+    nav a{padding:6px 9px;font-size:13.5px}
+    .brand{font-size:17px}
+    .step{grid-template-columns:1fr;gap:10px;padding:20px}
+    .step-no{width:38px;height:38px;font-size:14px}
+    .foot-links{gap:24px}
+    section{padding:38px 0}
+  }
+</style>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#top" aria-label="糖心社区首页">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M12 20s-7-4.6-7-9.5A4.5 4.5 0 0 1 12 7.7a4.5 4.5 0 0 1 7 2.8C19 15.4 12 20 12 20z" fill="#fff"/></svg>
+      </span>
+      糖心社区
+    </a>
+    <nav aria-label="主导航">
+      <ul>
+        <li><a href="#about">社区介绍</a></li>
+        <li><a href="#sections">板块内容</a></li>
+        <li><a href="#guide">进入指南</a></li>
+        <li><a href="#rules">社区规则</a></li>
+        <li><a href="#faq">常见问题</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- 首屏 -->
+  <div class="hero">
+    <div class="wrap hero-inner">
+      <div>
+        <span class="eyebrow"><i></i>社区导航首页 · 使用说明</span>
+        <h1><em>糖心社区</em></h1>
+        <p class="lead">
+          这里是糖心社区的主题首页，用一页时间把「糖心社区是什么、从哪个入口进入、注册后能做什么、有哪些社区规则」讲清楚。内容以导航与说明为主，帮助你少走弯路，直接找到糖心社区的正确打开方式。
+        </p>
+        <div class="actions">
+          <a class="btn btn-primary" href="#guide">
+            查看进入指南
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a class="btn btn-ghost" href="#" data-download-placeholder="true" aria-disabled="true" tabindex="-1">下载</a>
+        </div>
+        <p class="hero-note">页面内容为社区介绍与使用说明，具体功能以实际站点为准。</p>
+      </div>
+
+      <aside class="hero-figure" aria-label="糖心社区速览">
+        <h2>糖心社区速览</h2>
+        <ul class="mini-list">
+          <li><b>01</b><span>定位：面向兴趣同好的内容分享型社区</span></li>
+          <li><b>02</b><span>入口：认准官方地址，避免收藏来源不明的链接</span></li>
+          <li><b>03</b><span>注册：按页面提示填写信息并完成验证</span></li>
+          <li><b>04</b><span>秩序：注册后先读版规，再开始发帖互动</span></li>
+        </ul>
+      </aside>
+    </div>
+  </div>
+
+  <!-- 社区介绍 -->
+  <section id="about">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="sec-tag">About</span>
+        <h2>糖心社区是一个怎样的地方</h2>
+        <p>先说清楚定位，再谈怎么用。糖心社区以兴趣内容分享和讨论为核心，更像一个有主题的线上客厅，而不是信息流堆叠的门户。</p>
+      </div>
+      <div class="grid grid-3">
+        <article class="card">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19V7a2 2 0 0 1 2-2h9l5 5v9a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z"/><path d="M8 12h8M8 16h5"/></svg></div>
+          <h3>内容为主</h3>
+          <p>糖心社区的内容由用户发布与维护，主题帖、图文分享和讨论集中在具体板块内，便于按兴趣查找。</p>
+        </article>
+        <article class="card">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.2"/><path d="M3.5 19a5.5 5.5 0 0 1 11 0"/><path d="M16 5.5a3 3 0 0 1 0 5.6M17.5 19a5 5 0 0 0-2.6-4.4"/></svg></div>
+          <h3>同好互动</h3>
+          <p>成员之间通过回帖、私信和关注建立联系，糖心社区的氛围依赖每位成员对规则的遵守与相互尊重。</p>
+        </article>
+        <article class="card">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.6 5.6 6 .8-4.4 4.2 1.1 6-5.3-3-5.3 3 1.1-6L3.4 9.4l6-.8z"/></svg></div>
+          <h3>轻量浏览</h3>
+          <p>不需要复杂设置即可开始阅读，注册账号后可以收藏、回帖和参与板块活动，使用门槛相对友好。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 板块内容 -->
+  <section id="sections" style="padding-top:0">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="sec-tag">Sections</span>
+        <h2>糖心社区里可以看什么</h2>
+        <p>进入糖心社区后，通常先按板块浏览。下面用四类常见内容说明阅读顺序，具体板块名称与开放情况以站点实际页面为准。</p>
+      </div>
+      <div class="grid grid-2">
+        <article class="card">
+          <h3>主题分享与经验帖</h3>
+          <p>社区的核心区域，成员围绕共同兴趣发布长文、心得与整理帖。适合先按热门或精华筛选，再逐篇阅读，避免一进来就被零散信息淹没。</p>
+        </article>
+        <article class="card">
+          <h3>讨论与问答</h3>
+          <p>遇到具体问题时，可以先搜索历史提问，再决定是否新开一帖。糖心社区的问答区更看重描述清楚背景，提问时多写一句条件，回复质量往往更高。</p>
+        </article>
+        <article class="card">
+          <h3>公告与版规</h3>
+          <p>公告区承载站点更新、活动通知和规则调整。新成员进入糖心社区后，建议先花十分钟读完置顶内容，再开始发帖，能减少大部分误操作。</p>
+        </article>
+        <article class="card">
+          <h3>个人空间与收藏</h3>
+          <p>登录后可管理自己的发帖、收藏与关注列表。把常看的帖子收进收藏夹，是糖心社区里比较实用的整理方式，也方便日后回查。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 进入指南 -->
+  <section id="guide" style="padding-top:0">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="sec-tag">Guide</span>
+        <h2>糖心社区怎么进：四步说明</h2>
+        <p>关于糖心社区官网入口，最常见的困惑是地址来源。下面的顺序从确认地址开始，到完成注册、熟悉规则，适合第一次接触的访问者。</p>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <div class="step-no" aria-hidden="true"></div>
+          <div>
+            <h3>确认官方入口</h3>
+            <p>优先从可信渠道获取糖心社区地址，不要随意点击陌生人发来的短链。收藏前核对域名拼写，避免进入仿冒页面。</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-no" aria-hidden="true"></div>
+          <div>
+            <h3>打开页面并浏览</h3>
+            <p>未注册也可以先浏览公开板块，感受糖心社区的内容风格。确认内容方向符合自己的兴趣，再考虑注册。</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-no" aria-hidden="true"></div>
+          <div>
+            <h3>完成注册与验证</h3>
+            <p>按页面提示填写账号信息并完成验证步骤。设置独立密码，不要与其他站点复用，这是使用糖心社区时最基本的安全习惯。</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-no" aria-hidden="true"></div>
+          <div>
+            <h3>阅读版规后参与</h3>
+            <p>进入糖心社区后先看置顶公告与版规，了解发帖格式和禁止事项。熟悉之后再发第一帖，互动会更顺畅。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 社区规则 -->
+  <section id="rules" class="rules">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="sec-tag">Rules</span>
+        <h2>在糖心社区互动的几条共识</h2>
+        <p>规则不是限制，而是让讨论可持续的前提。以下几条属于通行原则，具体条款以糖心社区站内公布为准。</p>
+      </div>
+      <ul class="rule-list">
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+          <span><b>发帖前先搜索：</b>重复内容会被合并或关闭，先查历史帖能节省自己和他人的时间。</span>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+          <span><b>对事不对人：</b>可以不同意观点，但避免攻击性表达，这是糖心社区讨论区的基本礼貌。</span>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+          <span><b>不发布违规信息：</b>遵守法律法规与站内公告，广告、引流和侵权内容通常会被处理。</span>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+          <span><b>保护个人信息：</b>不在公开帖中留下联系方式与真实资料，账号安全始终由自己负责。</span>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="sec-tag">FAQ</span>
+        <h2>关于糖心社区的常见问题</h2>
+        <p>把访问者问得最多的几件事集中回答，减少反复查找。</p>
+      </div>
+      <details open>
+        <summary>糖心社区需要注册才能浏览吗？</summary>
+        <p>通常公开板块可以先浏览，收藏、回帖等互动功能需要登录账号。具体开放范围以糖心社区站内设置为准。</p>
+      </details>
+      <details>
+        <summary>糖心社区官网入口如何辨别？</summary>
+        <p>建议从可信渠道进入，并核对域名与页面样式。遇到要求额外下载未知程序或索要敏感信息的页面，应停止操作。</p>
+      </details>
+      <details>
+        <summary>在糖心社区发帖有什么格式要求？</summary>
+        <p>不同板块可能要求标题前缀、标签或内容分类。发帖前阅读该板块的置顶说明，按提示填写即可通过审核。</p>
+      </details>
+      <details>
+        <summary>账号出现异常怎么办？</summary>
+        <p>先尝试通过站内找回流程重置密码，并检查登录环境。若仍无法解决，可按糖心社区公告中给出的反馈渠道联系处理。</p>
+      </details>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <div>
+        <div class="foot-brand">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M12 20s-7-4.6-7-9.5A4.5 4.5 0 0 1 12 7.7a4.5 4.5 0 0 1 7 2.8C19 15.4 12 20 12 20z" fill="#fff"/></svg>
+          </span>
+          糖心社区
+        </div>
+        <p class="foot-desc">糖心社区主题首页，整理社区定位、板块内容、进入流程与互动规则，供访问者快速了解与查阅。</p>
+      </div>
+      <div class="foot-links">
+        <div>
+          <h4>内容导航</h4>
+          <ul>
+            <li><a href="#about">社区介绍</a></li>
+            <li><a href="#sections">板块内容</a></li>
+            <li><a href="#guide">进入指南</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>使用帮助</h4>
+          <ul>
+            <li><a href="#rules">社区规则</a></li>
+            <li><a href="#faq">常见问题</a></li>
+            <li><a href="#top">返回顶部</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 糖心社区 · 本页为社区介绍与使用说明</span>
+      <span>内容以站内实际公告为准</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
