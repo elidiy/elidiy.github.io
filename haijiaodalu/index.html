@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>海角大陆今日直接访问-今日直达入口_海角大陆访问指南_今日直接访问方法</title>
+<meta name="description" content="海角大陆今日直接访问主题首页，整理今日直达入口、访问方式说明、常见问题与更新记录，帮助访客快速了解海角大陆今日直接访问的入口路径与使用注意点。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230e2a3a'/%3E%3Cpath d='M10 42 L24 22 L34 34 L42 24 L54 42 Z' fill='%233fc1a9'/%3E%3Ccircle cx='46' cy='18' r='6' fill='%23f4b860'/%3E%3C/svg%3E">
+<style>
+:root{
+  --ink:#0e2a3a;
+  --ink-soft:#28495c;
+  --sea:#1f6f7a;
+  --mint:#3fc1a9;
+  --sand:#f4b860;
+  --paper:#f6f4ee;
+  --white:#ffffff;
+  --line:rgba(14,42,58,.14);
+  --radius:14px;
+  --shadow:0 10px 30px rgba(14,42,58,.10);
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans SC",system-ui,sans-serif;
+  color:var(--ink);
+  background:var(--paper);
+  line-height:1.75;
+  font-size:16px;
+  -webkit-font-smoothing:antialiased;
+}
+h1,h2,h3{line-height:1.3;margin:0;}
+a{color:var(--sea);text-decoration:none;}
+a:hover{text-decoration:underline;}
+img,svg{max-width:100%;}
+.wrap{width:100%;max-width:1120px;margin:0 auto;padding:0 20px;}
+.skip{position:absolute;left:-9999px;}
+.skip:focus{left:12px;top:12px;background:#fff;padding:8px 14px;border-radius:8px;z-index:99;}
+
+/* header */
+.site-header{
+  position:sticky;top:0;z-index:50;
+  background:rgba(246,244,238,.92);
+  backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--line);
+}
+.header-inner{
+  display:flex;align-items:center;justify-content:space-between;
+  gap:16px;padding:12px 0;flex-wrap:wrap;
+}
+.logo{display:flex;align-items:center;gap:10px;font-weight:700;color:var(--ink);font-size:17px;}
+.logo:hover{text-decoration:none;}
+.logo-mark{width:38px;height:38px;flex:0 0 38px;border-radius:10px;overflow:hidden;box-shadow:0 4px 12px rgba(14,42,58,.18);}
+.nav{display:flex;gap:6px;flex-wrap:wrap;align-items:center;}
+.nav a{
+  padding:7px 12px;border-radius:999px;font-size:14px;color:var(--ink-soft);
+  transition:background .2s,color .2s;
+}
+.nav a:hover{background:rgba(63,193,169,.16);color:var(--ink);text-decoration:none;}
+.nav .nav-cta{background:var(--ink);color:#fff;}
+.nav .nav-cta:hover{background:var(--sea);color:#fff;}
+
+/* hero */
+.hero{
+  position:relative;overflow:hidden;
+  background:linear-gradient(160deg,#0e2a3a 0%,#154656 55%,#1f6f7a 100%);
+  color:#eaf6f3;
+}
+.hero-inner{
+  position:relative;z-index:2;
+  display:grid;grid-template-columns:1.15fr .85fr;gap:36px;
+  padding:56px 0 60px;align-items:center;
+}
+.hero h1{
+  font-size:clamp(26px,3.6vw,42px);
+  letter-spacing:.5px;
+  color:#fff;
+  margin-bottom:16px;
+}
+.hero .kicker{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:13px;letter-spacing:1px;color:#bfe8e0;
+  border:1px solid rgba(191,232,224,.4);border-radius:999px;
+  padding:4px 12px;margin-bottom:18px;
+}
+.hero p.lead{font-size:16px;color:#cfe6e3;margin:0 0 26px;max-width:38em;}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;align-items:center;}
+.btn{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:12px 22px;border-radius:999px;font-size:15px;font-weight:600;
+  border:1px solid transparent;cursor:pointer;
+}
+.btn-primary{background:var(--mint);color:#062821;}
+.btn-primary:hover{background:#5cd3bd;text-decoration:none;}
+.btn-ghost{background:transparent;color:#e6f6f2;border-color:rgba(230,246,242,.45);}
+.btn-ghost:hover{background:rgba(230,246,242,.12);text-decoration:none;}
+.hero-note{font-size:13px;color:#a9cfc9;margin-top:14px;}
+.hero-art{
+  position:relative;border-radius:20px;overflow:hidden;
+  box-shadow:0 18px 40px rgba(0,0,0,.28);
+  background:rgba(255,255,255,.06);
+}
+.hero-art svg{display:block;width:100%;height:auto;}
+
+/* quick access strip */
+.strip{
+  background:var(--white);border-bottom:1px solid var(--line);
+}
+.strip-inner{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:0;
+  padding:0;
+}
+.strip-item{
+  padding:20px 18px;border-right:1px solid var(--line);
+}
+.strip-item:last-child{border-right:none;}
+.strip-item b{display:block;font-size:15px;margin-bottom:4px;}
+.strip-item span{font-size:13px;color:var(--ink-soft);}
+
+/* sections */
+section{padding:56px 0;}
+.sec-head{max-width:44em;margin-bottom:28px;}
+.sec-head .eyebrow{
+  font-size:13px;letter-spacing:2px;color:var(--sea);font-weight:600;
+  display:block;margin-bottom:8px;
+}
+.sec-head h2{font-size:clamp(22px,2.6vw,30px);margin-bottom:10px;}
+.sec-head p{margin:0;color:var(--ink-soft);}
+
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+.grid-2{display:grid;grid-template-columns:1.1fr .9fr;gap:32px;align-items:start;}
+.card{
+  background:var(--white);border:1px solid var(--line);border-radius:var(--radius);
+  padding:24px;box-shadow:var(--shadow);
+}
+.card h3{font-size:17px;margin-bottom:10px;display:flex;align-items:center;gap:10px;}
+.card p{margin:0;color:var(--ink-soft);font-size:15px;}
+.card .ico{
+  width:34px;height:34px;flex:0 0 34px;border-radius:9px;
+  background:rgba(63,193,169,.16);display:grid;place-items:center;
+}
+.card .ico svg{width:18px;height:18px;}
+
+/* steps */
+.steps{list-style:none;margin:0;padding:0;counter-reset:step;}
+.steps li{
+  position:relative;padding:0 0 22px 52px;counter-increment:step;
+}
+.steps li::before{
+  content:counter(step);
+  position:absolute;left:0;top:0;width:34px;height:34px;border-radius:50%;
+  background:var(--ink);color:#fff;display:grid;place-items:center;
+  font-size:14px;font-weight:700;
+}
+.steps li::after{
+  content:"";position:absolute;left:16px;top:38px;bottom:4px;width:2px;
+  background:linear-gradient(var(--line),transparent);
+}
+.steps li:last-child{padding-bottom:0;}
+.steps li:last-child::after{display:none;}
+.steps h3{font-size:16px;margin-bottom:4px;}
+.steps p{margin:0;color:var(--ink-soft);font-size:15px;}
+
+/* table */
+.table-box{overflow-x:auto;border-radius:var(--radius);border:1px solid var(--line);background:#fff;box-shadow:var(--shadow);}
+table{width:100%;border-collapse:collapse;font-size:14.5px;min-width:520px;}
+th,td{text-align:left;padding:14px 18px;border-bottom:1px solid var(--line);}
+th{background:rgba(31,111,122,.07);font-weight:600;color:var(--ink);}
+tr:last-child td{border-bottom:none;}
+td .tag{
+  display:inline-block;font-size:12px;padding:2px 9px;border-radius:999px;
+  background:rgba(63,193,169,.18);color:#17604f;
+}
+td .tag.wait{background:rgba(244,184,96,.24);color:#8a5a10;}
+
+/* faq */
+.faq details{
+  background:#fff;border:1px solid var(--line);border-radius:12px;
+  padding:0 20px;margin-bottom:12px;box-shadow:0 4px 14px rgba(14,42,58,.05);
+}
+.faq summary{
+  cursor:pointer;padding:16px 0;font-weight:600;font-size:15.5px;
+  list-style:none;display:flex;justify-content:space-between;gap:14px;align-items:center;
+}
+.faq summary::-webkit-details-marker{display:none;}
+.faq summary::after{content:"+";font-size:20px;color:var(--sea);line-height:1;}
+.faq details[open] summary::after{content:"–";}
+.faq details p{margin:0 0 16px;color:var(--ink-soft);font-size:15px;}
+
+/* download panel */
+.panel{
+  background:linear-gradient(150deg,#0e2a3a,#1f6f7a);
+  color:#eaf6f3;border-radius:18px;padding:36px;
+  display:grid;grid-template-columns:1.2fr .8fr;gap:28px;align-items:center;
+}
+.panel h2{color:#fff;font-size:clamp(20px,2.4vw,26px);margin-bottom:10px;}
+.panel p{margin:0 0 18px;color:#c8e3df;font-size:15px;}
+.btn-download{
+  display:inline-flex;align-items:center;gap:8px;
+  background:var(--sand);color:#3a2404;font-weight:700;
+  padding:12px 24px;border-radius:999px;font-size:15px;
+  pointer-events:none;opacity:.95;
+}
+.panel .meta{font-size:13px;color:#a9cfc9;margin-top:12px;}
+
+/* footer */
+.site-footer{background:#0e2a3a;color:#b9d3d8;padding:44px 0 28px;font-size:14px;}
+.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:32px;margin-bottom:28px;}
+.site-footer h3{color:#fff;font-size:15px;margin-bottom:12px;}
+.site-footer a{color:#b9d3d8;}
+.site-footer a:hover{color:#fff;}
+.site-footer ul{list-style:none;margin:0;padding:0;display:grid;gap:8px;}
+.footer-brand{display:flex;align-items:center;gap:10px;color:#fff;font-weight:700;margin-bottom:12px;font-size:16px;}
+.footer-brand .logo-mark{box-shadow:none;}
+.footer-bottom{border-top:1px solid rgba(185,211,216,.18);padding-top:18px;font-size:13px;color:#8fb0b6;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;}
+
+@media (max-width:900px){
+  .hero-inner{grid-template-columns:1fr;padding:40px 0 44px;}
+  .hero-art{order:-1;max-width:420px;}
+  .strip-inner{grid-template-columns:repeat(2,1fr);}
+  .strip-item:nth-child(2){border-right:none;}
+  .strip-item:nth-child(1),.strip-item:nth-child(2){border-bottom:1px solid var(--line);}
+  .grid-3{grid-template-columns:1fr;}
+  .grid-2{grid-template-columns:1fr;}
+  .panel{grid-template-columns:1fr;padding:28px;}
+  .footer-grid{grid-template-columns:1fr 1fr;}
+}
+@media (max-width:600px){
+  body{font-size:15.5px;}
+  .nav{gap:2px;}
+  .nav a{padding:6px 9px;font-size:13px;}
+  .logo{font-size:15px;}
+  section{padding:40px 0;}
+  .strip-item{padding:16px 14px;}
+  .footer-grid{grid-template-columns:1fr;}
+}
+</style>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">跳到主要内容</a>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="logo" href="#top">
+      <span class="logo-mark" aria-hidden="true">
+        <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+          <rect width="64" height="64" rx="14" fill="#0e2a3a"/>
+          <path d="M10 42 L24 22 L34 34 L42 24 L54 42 Z" fill="#3fc1a9"/>
+          <circle cx="46" cy="18" r="6" fill="#f4b860"/>
+        </svg>
+      </span>
+      海角大陆今日直接访问
+    </a>
+    <nav class="nav" aria-label="主导航">
+      <a href="#access">直达入口</a>
+      <a href="#howto">访问步骤</a>
+      <a href="#status">状态说明</a>
+      <a href="#faq">常见问题</a>
+      <a class="nav-cta" href="#access">今日进入</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero" id="top">
+    <div class="wrap hero-inner">
+      <div>
+        <span class="kicker">今日直达 · 访问主题首页</span>
+        <h1>海角大陆今日直接访问</h1>
+        <p class="lead">这里围绕“今日直接访问”整理一条清晰的路径：先确认当前可用入口，再按步骤进入，最后了解常见问题与状态说明。页面内容以入口信息与访问方式为主，帮助你把“想访问”变成“知道怎么访问”。</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#access">查看今日直达入口
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a class="btn btn-ghost" href="#howto">访问步骤说明</a>
+        </div>
+        <p class="hero-note">提示：入口地址与开放状态可能变化，请以本页“状态说明”与官方公告为准。</p>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <svg viewBox="0 0 520 380" xmlns="http://www.w3.org/2000/svg" role="img">
+          <defs>
+            <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#164656"/>
+              <stop offset="1" stop-color="#1f6f7a"/>
+            </linearGradient>
+            <linearGradient id="seaG" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#2f8b93"/>
+              <stop offset="1" stop-color="#0e2a3a"/>
+            </linearGradient>
+          </defs>
+          <rect width="520" height="380" fill="url(#sky)"/>
+          <circle cx="404" cy="88" r="34" fill="#f4b860" opacity=".9"/>
+          <path d="M0 250 Q90 210 170 240 T340 236 T520 250 L520 380 L0 380 Z" fill="url(#seaG)"/>
+          <path d="M0 268 Q70 246 140 264 T280 262 T420 264 T520 270" stroke="#7fd6c6" stroke-width="2" fill="none" opacity=".5"/>
+          <path d="M120 268 L200 168 L252 244 L300 190 L392 268 Z" fill="#122f3d" opacity=".92"/>
+          <path d="M200 168 L252 244 L200 244 Z" fill="#3fc1a9" opacity=".55"/>
+          <path d="M300 190 L392 268 L300 268 Z" fill="#3fc1a9" opacity=".32"/>
+          <g stroke="#eaf6f3" stroke-width="2" fill="none" opacity=".8">
+            <path d="M60 96 h70"/><path d="M78 88 h44"/>
+          </g>
+          <g fill="#bfe8e0" opacity=".9">
+            <circle cx="86" cy="130" r="3"/><circle cx="112" cy="146" r="2"/><circle cx="70" cy="158" r="2.4"/>
+          </g>
+          <path d="M356 300 q22 -14 44 0 q-22 14 -44 0 Z" fill="#f4b860" opacity=".85"/>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <div class="strip">
+    <div class="wrap strip-inner">
+      <div class="strip-item"><b>入口路径</b><span>页面内直达链接集中管理</span></div>
+      <div class="strip-item"><b>访问步骤</b><span>四步完成进入准备</span></div>
+      <div class="strip-item"><b>状态说明</b><span>区分可用、维护与待确认</span></div>
+      <div class="strip-item"><b>常见问题</b><span>汇总访问高频疑问</span></div>
+    </div>
+  </div>
+
+  <section id="access">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">今日直达入口</span>
+        <h2>海角大陆今日直接访问的入口与使用范围</h2>
+        <p>“今日直接访问”指的是当天通过页面给出的入口直接进入，而不是在多个来源之间反复跳转。下列内容把入口、适用说明与注意事项放在同一处，便于一次看完。</p>
+      </div>
+      <div class="grid-3">
+        <article class="card">
+          <h3><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="#1f6f7a" stroke-width="2"><path d="M4 12h16M12 4v16"/></svg></span>今日入口</h3>
+          <p>当日入口集中在本页导航与首屏按钮。点击“查看今日直达入口”或顶部“今日进入”，即可回到本区域，按步骤完成访问准备。</p>
+        </article>
+        <article class="card">
+          <h3><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="#1f6f7a" stroke-width="2"><circle cx="12" cy="12" r="8"/><path d="M12 8v4l3 2"/></svg></span>时效说明</h3>
+          <p>入口的可用性按天判断。若页面显示为待确认或维护中，说明当日暂未确认可用状态，建议稍后再看状态说明区域。</p>
+        </article>
+        <article class="card">
+          <h3><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="#1f6f7a" stroke-width="2"><path d="M12 3l7 4v5c0 4-3 7-7 9-4-2-7-5-7-9V7z"/></svg></span>安全提示</h3>
+          <p>请只使用本页给出的入口，不轻信来源不明的跳转链接。遇到要求额外下载不明程序的页面，应停止操作并返回本页核对。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="howto" style="background:var(--white);border-top:1px solid var(--line);border-bottom:1px solid var(--line);">
+    <div class="wrap grid-2">
+      <div>
+        <div class="sec-head">
+          <span class="eyebrow">访问步骤</span>
+          <h2>完成一次海角大陆今日直接访问的四步</h2>
+          <p>步骤围绕“确认—进入—核对—记录”展开，目的是让每次访问都有可复现的路径，而不是依赖记忆中的旧地址。</p>
+        </div>
+        <ol class="steps">
+          <li>
+            <h3>确认当日状态</h3>
+            <p>先看本页“状态说明”表格中的日期与状态标签，确认今日入口是否处于可用范围，避免在维护时段反复尝试。</p>
+          </li>
+          <li>
+            <h3>从本页入口进入</h3>
+            <p>使用首屏或导航中的入口按钮，保持在同一路径内完成进入。不要同时打开多个来源的地址，以免混淆。</p>
+          </li>
+          <li>
+            <h3>核对页面信息</h3>
+            <p>进入后核对页面名称与主题是否与“海角大陆今日直接访问”一致，确认无误后再进行后续操作。</p>
+          </li>
+          <li>
+            <h3>记录异常情况</h3>
+            <p>若出现加载失败或提示变化，记录出现时间与提示文字，回到本页对照常见问题，判断是网络原因还是入口调整。</p>
+          </li>
+        </ol>
+      </div>
+      <aside class="card" style="align-self:stretch;">
+        <h3>访问前检查清单</h3>
+        <p style="margin-bottom:14px;">以下项目用于自查，不改动任何设备设置，只帮助你判断问题出在哪一环。</p>
+        <ul style="margin:0;padding-left:18px;color:var(--ink-soft);font-size:15px;display:grid;gap:8px;">
+          <li>网络连接是否正常，能否打开其他常用网站。</li>
+          <li>访问时间是否处于页面标注的维护时段。</li>
+          <li>是否从本页入口进入，而非历史收藏的旧地址。</li>
+          <li>浏览器是否拦截了页面必要的脚本或跳转。</li>
+          <li>是否记录了完整的提示文字，便于对照排查。</li>
+        </ul>
+        <p style="margin-top:16px;font-size:14px;color:var(--sea);">按清单逐项核对，多数访问问题都能定位到具体环节。</p>
+      </aside>
+    </div>
+  </section>
+
+  <section id="status">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">状态说明</span>
+        <h2>今日入口状态与更新记录</h2>
+        <p>下表按日期记录入口状态。状态分为可用、维护中与待确认三类，仅代表本页记录时的判断，不构成对第三方服务的承诺。</p>
+      </div>
+      <div class="table-box">
+        <table>
+          <caption class="skip">海角大陆今日直接访问入口状态记录</caption>
+          <thead>
+            <tr><th scope="col">记录日期</th><th scope="col">入口状态</th><th scope="col">说明</th><th scope="col">处理建议</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>今日</td>
+              <td><span class="tag">可用</span></td>
+              <td>本页入口可正常打开，按访问步骤进入即可。</td>
+              <td>直接使用首屏入口</td>
+            </tr>
+            <tr>
+              <td>今日（维护时段）</td>
+              <td><span class="tag wait">维护中</span></td>
+              <td>入口可能短时不可用，页面提示会同步变化。</td>
+              <td>错开时段再试</td>
+            </tr>
+            <tr>
+              <td>待更新</td>
+              <td><span class="tag wait">待确认</span></td>
+              <td>尚未确认当日状态，页面不给出可用结论。</td>
+              <td>查看常见问题后再判断</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="margin-top:14px;font-size:14px;color:var(--ink-soft);">说明：入口地址与开放时段可能调整，海角大陆今日直接访问的具体入口以本页最新显示为准；如遇状态变化，优先参考本区域记录。</p>
+    </div>
+  </section>
+
+  <section id="faq" style="background:var(--white);border-top:1px solid var(--line);">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">常见问题</span>
+        <h2>关于今日直接访问的常见疑问</h2>
+        <p>问题来自访问过程中最常遇到的情形，答案只覆盖本页能够确认的范围。</p>
+      </div>
+      <div class="faq">
+        <details open>
+          <summary>“今日直接访问”和普通收藏链接有什么区别？</summary>
+          <p>收藏链接可能指向过期地址，而今日直接访问强调的是当天经本页确认的入口。两者区别在于时效确认，而非访问方式本身。</p>
+        </details>
+        <details>
+          <summary>入口打不开时应该先做什么？</summary>
+          <p>先看状态说明中的维护时段，再按访问前检查清单逐项核对网络与浏览器设置。若仍无改善，记录提示文字后稍后再试。</p>
+        </details>
+        <details>
+          <summary>页面显示“待确认”代表不能访问吗？</summary>
+          <p>不是。它表示本页尚未确认当日状态，既没有判定可用，也没有判定不可用。此时应以最新记录为准，不把待确认当作可用结论。</p>
+        </details>
+        <details>
+          <summary>为什么强调只从本页入口进入？</summary>
+          <p>因为外部跳转来源难以核对，容易把访客带到与主题无关的页面。从本页入口进入可减少中间环节，也便于对照状态记录排查问题。</p>
+        </details>
+        <details>
+          <summary>访问日志需要保留吗？</summary>
+          <p>建议记录出现异常的时间与提示文字即可。这类信息足以帮助你判断问题是否与入口调整有关，不需要保存额外内容。</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section id="download">
+    <div class="wrap">
+      <div class="panel">
+        <div>
+          <h2>访问说明文档下载</h2>
+          <p>文档整理今日直达入口的使用路径、状态判断方法与常见问题摘要，适合需要离线对照的访客。下载入口将在地址确认后开放。</p>
+          <a class="btn-download" href="#" data-download-placeholder="true" aria-disabled="true" tabindex="-1">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M12 4v11M7 11l5 5 5-5M5 20h14"/></svg>
+            下载
+          </a>
+          <p class="meta">当前为占位入口，暂不可点击；正式地址发布后此处可直接使用。</p>
+        </div>
+        <div aria-hidden="true">
+          <svg viewBox="0 0 240 180" xmlns="http://www.w3.org/2000/svg">
+            <rect x="34" y="20" width="172" height="132" rx="12" fill="rgba(255,255,255,.08)" stroke="rgba(234,246,243,.35)" stroke-width="2"/>
+            <rect x="54" y="44" width="96" height="8" rx="4" fill="#3fc1a9"/>
+            <rect x="54" y="64" width="132" height="7" rx="3.5" fill="rgba(234,246,243,.4)"/>
+            <rect x="54" y="82" width="118" height="7" rx="3.5" fill="rgba(234,246,243,.3)"/>
+            <rect x="54" y="100" width="132" height="7" rx="3.5" fill="rgba(234,246,243,.22)"/>
+            <circle cx="178" cy="128" r="18" fill="#f4b860" opacity=".9"/>
+            <path d="M171 128 l5 5 9 -10" stroke="#3a2404" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">
+          <span class="logo-mark" aria-hidden="true">
+            <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+              <rect width="64" height="64" rx="14" fill="#164656"/>
+              <path d="M10 42 L24 22 L34 34 L42 24 L54 42 Z" fill="#3fc1a9"/>
+              <circle cx="46" cy="18" r="6" fill="#f4b860"/>
+            </svg>
+          </span>
+          海角大陆今日直接访问
+        </div>
+        <p style="margin:0;max-width:30em;">以“今日直达入口、访问步骤、状态说明”为核心的信息页，帮助访客在一次浏览内完成访问准备。海角大陆今日直接访问的入口状态以本页记录为准。</p>
+      </div>
+      <div>
+        <h3>页面导航</h3>
+        <ul>
+          <li><a href="#access">今日直达入口</a></li>
+          <li><a href="#howto">访问步骤</a></li>
+          <li><a href="#status">状态说明</a></li>
+          <li><a href="#faq">常见问题</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>访问提示</h3>
+        <ul>
+          <li><a href="#top">返回页面顶部</a></li>
+          <li><a href="#download">说明文档下载</a></li>
+          <li><a href="#status">核对最新状态</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 海角大陆今日直接访问 · 主题首页</span>
+      <span>入口与状态可能调整，请以本页最新说明为准。</span>
+    </div>
+  </div>
+</footer>
+</body>
+            </html>
